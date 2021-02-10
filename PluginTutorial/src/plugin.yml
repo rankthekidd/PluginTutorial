@@ -1,0 +1,8 @@
+name: PluginTutorial
+author: rankthekidd
+main: com.rankthekidd.tutorial.Main
+version: 1.0
+description: A tutorial for my YouTube series on how to create a java plugin
+api-version: 1.13
+
+commands:
