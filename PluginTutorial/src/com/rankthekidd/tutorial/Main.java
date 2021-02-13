@@ -26,13 +26,21 @@ public class Main extends JavaPlugin implements Listener { // << Any class that 
 	 * 
 	 * ===================================================== 
 	 */
+	
+	EntityHit entHit; //Declares a new variable that we will set to our EntityHit.java class in onEnable()
+	
 	public void onEnable()
 	{
+		entHit = new EntityHit(); //setting our newly created variable entHit to the actual EntityHit.java class
+		
+		
 		/*
 		 * Registering Listeners and Commands here!
 		 * =========================================
 		 */
 		Bukkit.getServer().getPluginManager().registerEvents(this, this);
+		Bukkit.getServer().getPluginManager().registerEvents(entHit, this);
+		
 		
 		//Broadcast a message to the console to alert the operator that the plugin has been enabled with no errors.
 		Bukkit.getConsoleSender().sendMessage("" + ChatColor.GREEN + ChatColor.BOLD + "Plugin Enabled!");
